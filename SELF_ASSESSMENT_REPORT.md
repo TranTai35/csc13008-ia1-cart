@@ -1,6 +1,6 @@
 # Self-assessment — IA#1
 
-Submitted by: <24127119> — < Tran Phuoc Tai >
+Submitted by: 24127119 —  Tran Phuoc Tai 
 
 Total I claim: 91 / 100
 

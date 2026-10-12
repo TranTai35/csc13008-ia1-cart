@@ -6,6 +6,10 @@ and terminal results after implementation and CI setup.
 The follow-up boundary-testing task was recorded during the
 improvement process. Earlier entries remain retrospective.
 
+Evidence below refers to the current files or reported terminal
+results. The initial commit does not preserve a separate commit
+for every development step.
+
 ## 2026-10-11 — Assignment Requirements and Workflow Planning
 
 Tool: ChatGPT.
@@ -18,6 +22,7 @@ Changed: None.
 Rejected: None.
 By hand: No code was written at this stage; this task focused on
 understanding the assignment requirements.
+Evidence: Starter README.md and the assignment rubric discussed in the conversation.
 
 ## 2026-10-12 — Environment Setup and Initial Failing Test
 
@@ -30,6 +35,7 @@ PowerShell execution policy.
 Rejected: None.
 By hand: Checked the Node.js version, ran npm.cmd test, and inspected
 the initial failure caused by Error: not implemented.
+Evidence: Reported terminal output showed Node.js v24.18.0, the npm.ps1 execution-policy error, and the initial Error: not implemented.
 
 ## 2026-10-12 — cartTotal Implementation
 
@@ -44,6 +50,7 @@ Rejected: None.
 By hand: Applied the code to src/cart.js, saved the file, and ran the
 starter test. Confirmed that the worked example passed with the
 expected total of 467400. The function logic was AI-generated.
+Evidence: src/cart.js; the worked-example test in test/cart.test.js; reported initial passing test.
 
 ## 2026-10-12 — Specification-Based Tests
 
@@ -59,6 +66,7 @@ Rejected: None.
 By hand: Added the proposed tests while retaining the original
 starter test. Ran npm.cmd test and checked that all 9 tests passed
 at this stage. The additional test code was AI-generated.
+Evidence: test/cart.test.js; reported run with 9 tests passing at this stage.
 
 ## 2026-10-12 — Project Rules and Format Quality Gate
 
@@ -75,6 +83,7 @@ By hand: Created the files, updated package.json, ran
 npm.cmd run check, and corrected the reported formatting issues.
 Ran the check again and confirmed 9 passing tests and
 Basic formatting checks passed at this stage.
+Evidence: AGENTS.md, package.json, scripts/check-format.js; terminal output first reported missing final newlines, then a successful combined gate.
 
 ## 2026-10-12 — GitHub Actions CI and Repository Setup
 
@@ -90,6 +99,7 @@ commit 789adc2, created the GitHub repository, and pushed the project.
 Checked the repository page, which displayed a green status beside
 that commit. This evidence relates to the initial version with
 9 tests, rather than the later boundary-test update.
+Evidence: .github/workflows/ci.yml; commit 789adc2 and the earlier repository screenshot. No latest 12-test CI result is claimed.
 
 ## 2026-10-12 — Implementation Brief Documentation
 
@@ -105,6 +115,7 @@ Rejected: None.
 By hand: Created an empty brief.md initially, then added the content
 drafted by ChatGPT. Requested a clearer layout. The complete brief
 was not supplied before the original code generation.
+Evidence: brief.md, sections 1 and 10, disclose the original brief timing and the follow-up task.
 
 ## 2026-10-12 — Self-Assessment Draft
 
@@ -119,6 +130,7 @@ Rejected: None.
 By hand: No independently written self-assessment content is
 claimed in this entry. The draft and suggested scores were
 produced by ChatGPT and require review against the final submission.
+Evidence: ChatGPT supplied a report draft separately. SELF_ASSESSMENT_REPORT.md was absent from the ZIP submitted for review.
 
 ## 2026-10-12 — Follow-up Boundary Test Coverage
 
@@ -134,6 +146,7 @@ npm.cmd run check. Verified 12 tests passed and the formatting
 check passed. The additional test code was AI-generated.
 CI for this updated version had not yet been confirmed when
 this entry was written.
+Evidence: The three boundary tests in test/cart.test.js and the reported run with 12 tests passing.
 
 ## Scope of AI Assistance
 
@@ -149,3 +162,24 @@ additional improvement round.
 The latest reported local result is 12 passing tests and a
 successful basic formatting check. I have not claimed the
 AI-generated code as independently written by me.
+
+## 2026-10-12 — Archive Review and Documentation Refinement
+
+Tool: ChatGPT.
+Asked for: Review the submitted archive, assess it against the rubric,
+and improve the brief and AI log.
+Kept: The review found the implementation consistent with README.md.
+The assistant ran npm run check on the extracted archive and observed
+12 passing tests and a successful basic formatting check. This
+revision adds clearer requirements and evidence references to the
+brief and log.
+Changed: ChatGPT reorganized brief.md into input, calculation, error,
+acceptance-test, and completion sections, and added evidence lines
+to the existing AI-log entries. The retrospective timeline was kept.
+Rejected: No proposed change was rejected during this review.
+By hand: No new student-written code or final CI verification is
+claimed for this assistant-performed review. Applying and committing
+these revised documents remains to be recorded after it is done.
+Evidence: Submitted csc13008-ia1-cart-main.zip; the assistant's actual
+review run; revised brief.md and AI-LOG.md. The uploaded archive lacked
+SELF_ASSESSMENT_REPORT.md, which was supplied separately.

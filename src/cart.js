@@ -1,4 +1,4 @@
-// Implement cartTotal here. See README.md for the specification.
+// Calculate the cart total according to the contract in README.md.
 export function cartTotal(items, options) {
   if (items.length === 0) {
     return 0

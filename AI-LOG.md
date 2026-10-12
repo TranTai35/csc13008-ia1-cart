@@ -183,3 +183,34 @@ these revised documents remains to be recorded after it is done.
 Evidence: Submitted csc13008-ia1-cart-main.zip; the assistant's actual
 review run; revised brief.md and AI-LOG.md. The uploaded archive lacked
 SELF_ASSESSMENT_REPORT.md, which was supplied separately.
+
+## 2026-10-12 — Formatting Gate Verification Plan
+
+Tool: ChatGPT.
+Asked for: Improve the actual assignment quality toward a higher mark.
+Kept: A focused follow-up to verify the existing formatting gate rather
+than add redundant cart tests solely to increase their count.
+Changed: The assistant saved docs/harness-brief.md before implementing
+the follow-up, specifying permitted files and expected failure cases.
+Rejected: No rejected student decision is claimed.
+By hand: This planning document was assistant-written. No new student
+implementation or explanation is claimed.
+Evidence: docs/harness-brief.md, saved before test/format.test.js.
+
+## 2026-10-12 — Formatting Gate Verification Results
+
+Tool: ChatGPT.
+Asked for: Implement and verify the follow-up in docs/harness-brief.md.
+Kept: Five tests that invoke the existing checker in temporary projects,
+accept LF and CRLF files, and reject missing final newlines, tabs, and
+trailing whitespace. The temporary directories are removed afterwards.
+Changed: The assistant replaced stale starter comments with descriptions
+of the implemented function and the historical worked-example test.
+Rejected: No rejected student proposal is claimed.
+By hand: No student-authored implementation is claimed for this task.
+ChatGPT wrote the tests and ran npm run check on the extracted project.
+The student still needs to apply the files, run checks on Windows,
+push them, and verify the new CI run.
+Evidence: test/format.test.js; docs/harness-brief.md; observed review
+result of 17 passing tests (12 cart tests and 5 formatting-gate tests)
+and Basic formatting checks passed. No remote CI result is claimed.

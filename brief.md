@@ -119,3 +119,23 @@ Use `npm.cmd` if `npm.ps1` is blocked:
 
 - `npm.cmd test`
 - `npm.cmd run check`
+
+## 10. Follow-up Task — Boundary Test Coverage
+
+This follow-up task is documented before applying the changes below.
+The original implementation brief remains retrospective.
+
+### Scope
+
+Modify only `test/cart.test.js`.
+Do not change the function implementation or add dependencies.
+
+### Required Tests
+
+- A subtotal one dong below the threshold must include shipping.
+- A subtotal one dong above the threshold must receive free shipping.
+- A positive total ending in .5 must round up to the next whole dong.
+
+### Validation
+
+Run `npm run check` locally and confirm that CI passes after pushing.

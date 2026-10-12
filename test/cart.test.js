@@ -62,6 +62,59 @@ test('negative price throws RangeError', () => {
   assert.throws(() => cartTotal(items, options), RangeError)
 })
 
+test('total is rounded to the nearest whole dong', () => {
+  const items = [
+    { name: 'Sản phẩm', price: 1001, qty: 1 },
+  ]
+  const options = {
+    vatRate: 0.08,
+    freeShipFrom: 1000,
+    shipFee: 30000,
+  }
+
+  assert.equal(cartTotal(items, options), 1081)
+})
+
+test('shipping is charged one dong below the threshold', () => {
+  const items = [
+    { name: 'Boundary item', price: 499999, qty: 1 },
+  ]
+  const options = {
+    vatRate: 0,
+    freeShipFrom: 500000,
+    shipFee: 30000,
+  }
+
+  assert.equal(cartTotal(items, options), 529999)
+})
+
+test('shipping is free one dong above the threshold', () => {
+  const items = [
+    { name: 'Boundary item', price: 500001, qty: 1 },
+  ]
+  const options = {
+    vatRate: 0,
+    freeShipFrom: 500000,
+    shipFee: 30000,
+  }
+
+  assert.equal(cartTotal(items, options), 500001)
+})
+
+test('a positive total ending in .5 rounds up', () => {
+  const items = [
+    { name: 'Rounding item', price: 1, qty: 1 },
+  ]
+  const options = {
+    vatRate: 0.5,
+    freeShipFrom: 1,
+    shipFee: 30000,
+  }
+
+  assert.equal(cartTotal(items, options), 2)
+})
+
+
 for (const qty of [1.5, 0, -1]) {
   test(`quantity ${qty} throws RangeError`, () => {
     const items = [
@@ -76,16 +129,3 @@ for (const qty of [1.5, 0, -1]) {
     assert.throws(() => cartTotal(items, options), RangeError)
   })
 }
-
-test('total is rounded to the nearest whole dong', () => {
-  const items = [
-    { name: 'Sản phẩm', price: 1001, qty: 1 },
-  ]
-  const options = {
-    vatRate: 0.08,
-    freeShipFrom: 1000,
-    shipFee: 30000,
-  }
-
-  assert.equal(cartTotal(items, options), 1081)
-})

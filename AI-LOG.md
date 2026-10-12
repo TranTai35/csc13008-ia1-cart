@@ -159,8 +159,9 @@ checks, correcting reported formatting issues, and managing the
 Git repository. I also requested clearer documentation and an
 additional improvement round.
 
-The latest reported local result is 12 passing tests and a
-successful basic formatting check. I have not claimed the
+At the time this summary was first written, the latest student-reported
+local result was 12 passing tests and a successful formatting check.
+The later assistant review verified 17 passing tests; see the entries below. I have not claimed the
 AI-generated code as independently written by me.
 
 ## 2026-10-12 — Archive Review and Documentation Refinement
@@ -214,3 +215,36 @@ push them, and verify the new CI run.
 Evidence: test/format.test.js; docs/harness-brief.md; observed review
 result of 17 passing tests (12 cart tests and 5 formatting-gate tests)
 and Basic formatting checks passed. No remote CI result is claimed.
+
+## 2026-10-12 — Final Rubric and Documentation Review
+
+Tool: ChatGPT.
+Asked for: Identify the remaining rubric gaps and correct the documents
+without inventing student-authored work or unverified results.
+Kept: A criterion-by-criterion review and explicit distinction between
+local verification and remote CI. The brief contains the permitted
+files, contract, errors, and no-dependencies constraint required for
+the rubric's top band.
+Changed: Clarified the older 12-test summary as historical. Updated the
+self-assessment Brief claim from 12 to 15 because the criterion assesses
+content completeness; the retrospective disclosure remains intact.
+Rejected: The assistant did not adopt retrospective claims that the
+student independently wrote AI-generated code or verified final CI.
+This is an assistant decision, not a student rejection of generated code.
+By hand: No additional student-written code is claimed. The latest
+uploaded archive contains the applied harness tests and report.
+ChatGPT independently ran npm run check on that archive: 17 tests
+passed and the basic formatting gate passed. A final Windows run and
+GitHub Actions result have not been supplied for this revision.
+Evidence: brief.md, sections 2–9; docs/harness-brief.md;
+test/cart.test.js; test/format.test.js; actual review terminal results;
+SELF_ASSESSMENT_REPORT.md.
+
+## Current Verification Summary
+
+- Cart tests: 12 passing in the assistant's archive review.
+- Formatting-gate tests: 5 passing in that review.
+- Combined local gate: passed, 17 tests in total.
+- Final remote CI: not yet confirmed in the conversation.
+- Initial AI-log entries: retrospective; this limitation remains disclosed.
+- Authorship: generated code and documents remain attributed to ChatGPT.

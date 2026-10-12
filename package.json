@@ -1,0 +1,10 @@
+{
+  "name": "cart-starter",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "format:check": "node scripts/check-format.js",
+    "check": "npm run test && npm run format:check"
+  }
+}
